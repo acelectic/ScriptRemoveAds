@@ -30,21 +30,7 @@ const onWindowWillLoad = (callback)=>()=>
     callback?.()
 };
 
-const cleanAds = ()=>{
-    const ads = [
-        '[class*=ads]',
-        '[id*=ads]',
-        '#content > center',
-        '[class*=afc_popup]',
-        '#block-14'
-    ]
-    ads.forEach(removeElmFromClass)
-}
-cleanAds()
-document.onreadystatechange =onWindowWillLoad()
-
 $(window).on('load', function(){
-
     console.log('window loaded')
-
 })
+
